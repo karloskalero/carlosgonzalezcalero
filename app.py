@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, render_template  # Agregar render_template
 import pandas as pd
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 
 # Ruta del archivo Excel
 excel_file = 'data/datos.xlsx'
