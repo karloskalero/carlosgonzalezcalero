@@ -1,0 +1,156 @@
+/* Incluye la fuente personalizada */
+@font-face {
+    font-family: 'WindsorBT-LightCondensed';
+    src: url('fonts/WindsorBT-LightCondensed.woff') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-size: 1.5em;
+    font-family: 'WindsorBT-LightCondensed', 'Times New Roman', sans-serif;
+    margin: 0;
+    background: url('img/LL_Blur.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1001;
+}
+
+.menu-toggle {
+    background-color: grey;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1002;
+    position: relative;
+}
+
+.nav-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+
+.nav-menu ul {
+    list-style: none;
+    margin: 20px;
+    padding: 25px;
+}
+
+.nav-menu ul li {
+    margin: 20px 0px 15px;
+}
+
+.nav-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-menu ul li a.active {
+    font-weight: bold;
+}
+
+main {
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+}
+
+#home, #empresas {
+    padding: 20px;
+}
+
+.empresa-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.empresa-button {
+    background-color: white;  
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empresa-button img {
+    max-width: 140%;
+    max-height: 140%;
+}
+
+.empresa-button:hover {
+    border: 2px solid white;
+    transform: scale(1.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.empresa-info {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: left 0.3s ease;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu ul {
+        list-style: none;
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .nav-menu ul li {
+        margin: 20px 0px 15px;
+    }
+
+    .nav-menu ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-menu ul li a.active {
+        font-weight: bold;
+    }
+}
